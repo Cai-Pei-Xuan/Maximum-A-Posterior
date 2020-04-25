@@ -112,7 +112,7 @@ if __name__ == "__main__":
     )
     # 將train_data中各個相同label的資料放在一起
     getEachLabelDict(EachLabelDict, np.array(label_train), np.array(feature_train))
-    # 在給定的特徵時，計算每個label可以得到的機率
+    # 計算每個label的參數
     calculateEachLabelParameters(EachLabelDict, EachLabelParametersDict)
     # 計算測試資料的正確性
     predict_accuracy = predict(label_test, feature_test, EachLabelParametersDict)
